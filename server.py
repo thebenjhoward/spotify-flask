@@ -2,7 +2,7 @@ from flask import Flask, request, make_response
 import utils
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/predict')
 def song():
     uri = request.args.get('id', default="", type=str)
     if(uri == ""):
